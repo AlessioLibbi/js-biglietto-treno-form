@@ -23,8 +23,15 @@ sumbitBtn.addEventListener("click", function () {
         priceScounted = (kilo * KMprice) * 0.8;
     } else if (etaSelezionata === "over65") {
         priceScounted = (kilo * KMprice) * 0.6;
+    } else {
+        priceScounted = (kilo * KMprice)
     }
     console.log(priceScounted.toFixed(2));
-    result.innerHTML = `Signor ${nameAndSurname} il tuo biglietto costa ${priceScounted.toFixed(2)}€`;
+    // STAMPO RISULTATO
+    result.innerHTML = `Signor/a ${nameAndSurname} il tuo biglietto costa ${priceScounted.toFixed(2)}€`;
 
+})
+const nullBtn = document.getElementById("null-btn");   
+nullBtn.addEventListener("click", function () {
+    location.reload()
 })
